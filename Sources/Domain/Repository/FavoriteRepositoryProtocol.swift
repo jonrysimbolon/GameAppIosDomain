@@ -1,6 +1,6 @@
 import Combine
 
-public protocol FavoriteRepositoryProtocol: FetchableRepository where Item == Game {
+public protocol FavoriteRepositoryProtocol: FetchableRepositoryProtocol where Item == Game {
     func getFavorites() -> AnyPublisher<[Game], Error>
     func isFavorite(id: Int) -> Bool
     func toggleFavorite(_ game: Game) -> Bool
