@@ -13,9 +13,6 @@ let package = Package(
             targets: ["Domain"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.65.0")
-    ],
     targets: [
         .target(
             name: "Domain",
