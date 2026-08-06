@@ -19,14 +19,17 @@ workflows:
             -resultBundlePath TestResults.xcresult \
             -skipPackagePluginValidation
 
+      - name: Debug coverage files
+        script: |
+          ls -lah
+          find . -name "*.xcresult"
+          find . -name "*.profdata"
+
       - name: Upload coverage to Codecov
         script: |
           curl -Os https://uploader.codecov.io/latest/macos/codecov
           chmod +x codecov
-          ./codecov \
-            -t ffac83e8-c62b-480c-8e0d-9ed121434465 \
-            -s . \
-            -f TestResults.xcresult
+          ./codecov -t ffac83e8-c62b-480c-8e0d-9ed121434465
 
     publishing:
       email:
