@@ -5,9 +5,9 @@ public protocol ToggleFavoriteUseCase {
 
 public final class ToggleFavoriteUseCaseImpl: ToggleFavoriteUseCase {
 
-    private let repository: FavoriteRepositoryProtocol
+    private let repository: any FavoriteRepositoryProtocol
 
-    public init(repository: FavoriteRepositoryProtocol) {
+    public init(repository: any FavoriteRepositoryProtocol) {
         self.repository = repository
     }
 

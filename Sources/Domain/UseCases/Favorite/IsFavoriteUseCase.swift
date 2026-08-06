@@ -5,9 +5,9 @@ public protocol IsFavoriteUseCase {
 
 public final class IsFavoriteUseCaseImpl: IsFavoriteUseCase {
 
-    private let repository: FavoriteRepositoryProtocol
+    private let repository: any FavoriteRepositoryProtocol
 
-    public init(repository: FavoriteRepositoryProtocol) {
+    public init(repository: any FavoriteRepositoryProtocol) {
         self.repository = repository
     }
 

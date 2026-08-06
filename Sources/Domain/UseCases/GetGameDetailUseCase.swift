@@ -6,9 +6,9 @@ public protocol GetGameDetailUseCase {
 
 public final class GetGameDetailUseCaseImpl: GetGameDetailUseCase {
 
-    private let repository: GameRepositoryProtocol
+    private let repository: any GameRepositoryProtocol
 
-    public init(repository: GameRepositoryProtocol) {
+    public init(repository: any GameRepositoryProtocol) {
         self.repository = repository
     }
 
