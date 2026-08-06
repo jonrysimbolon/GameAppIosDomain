@@ -1,0 +1,16 @@
+workflows:
+  domain-tests:
+    name: Domain unit tests
+    environment:
+      xcode: latest
+    scripts:
+      - name: Run tests
+        script: |
+          xcodebuild test \
+          -scheme Domain \
+          -destination 'platform=iOS Simulator,name=iPhone 17' \
+          -skipPackagePluginValidation
+    publishing:
+      email:
+        recipients:
+          - jonrysimbolon19@gmail.com
