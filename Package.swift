@@ -16,9 +16,6 @@ let package = Package(
     targets: [
         .target(
             name: "Domain",
-            plugins: [
-                .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")
-            ]
         ),
         .testTarget(
             name: "DomainTests",
