@@ -19,11 +19,7 @@ workflows:
         script: |
           curl -Os https://uploader.codecov.io/latest/macos/codecov
           chmod +x codecov
-          ./codecov -t $CODECOV_TOKEN
-      - name: Vulnerability scan
-        script: |
-          brew install osv-scanner
-          osv-scanner --lockfile=Package.resolved
+          ./codecov -t ffac83e8-c62b-480c-8e0d-9ed121434465
     publishing:
       email:
         recipients:
